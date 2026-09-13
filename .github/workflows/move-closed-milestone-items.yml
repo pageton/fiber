@@ -1,30 +1,6 @@
 name: Move closed milestone items
 
-on:
-  workflow_dispatch:
-    inputs:
-      source_milestone:
-        description: Milestone that currently owns the closed items
-        required: true
-        type: string
-      target_milestone:
-        description: Milestone that should receive the closed items
-        required: true
-        type: string
-  workflow_call:
-    inputs:
-      source_milestone:
-        description: Milestone that currently owns the closed items
-        required: true
-        type: string
-      target_milestone:
-        description: Milestone that should receive the closed items
-        required: true
-        type: string
-    secrets:
-      ISSUE_PR_TOKEN:
-        required: true
-
+on: workflow_dispatch
 permissions:
   contents: read
   issues: write

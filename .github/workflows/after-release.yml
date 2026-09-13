@@ -1,12 +1,6 @@
 name: After Release
 
-on:
-  release:
-    types: [published]
-  repository_dispatch:
-    types: [after-release]
-  workflow_dispatch:
-
+on: workflow_dispatch
 permissions:
   contents: read
 

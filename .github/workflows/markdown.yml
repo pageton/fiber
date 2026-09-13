@@ -1,16 +1,6 @@
 name: markdownlint
 
-on:
-  workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - "**/*.md"
-  pull_request:
-    paths:
-      - "**/*.md"
-
+on: workflow_dispatch
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
   cancel-in-progress: true

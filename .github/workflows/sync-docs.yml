@@ -1,21 +1,6 @@
 name: Sync docs
 
-on:
-  push:
-    branches: [main]
-    paths: ['docs/**']
-  release:
-    types: [published]
-  repository_dispatch:
-    types: [sync-docs]
-  workflow_dispatch:
-    inputs:
-      mode:
-        description: 'push = sync current docs, release-all = version snapshot for latest release'
-        type: choice
-        options: [push, release-all]
-        default: push
-
+on: workflow_dispatch
 concurrency:
   group: ${{ github.workflow }}
   cancel-in-progress: false

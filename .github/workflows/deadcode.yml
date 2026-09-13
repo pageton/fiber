@@ -8,9 +8,7 @@ name: Dead Code (manual)
 # findings are written to the run summary. It does not fail the run, because
 # some flagged symbols may be intentionally test-only (review each by hand).
 
-on:
-  workflow_dispatch:
-
+on: workflow_dispatch
 permissions:
   contents: read
 

@@ -2,18 +2,7 @@
 # https://github.com/dependabot/dependabot-script?tab=readme-ov-file#github-actions-standalone
 name: ManualDependabot
 
-on:
-  workflow_dispatch:
-    inputs:
-      package-manager:
-        description: 'The package manager to use'
-        required: true
-        default: 'gomod'
-      directory:
-        description: 'The directory to scan'
-        required: true
-        default: '/'
-
+on: workflow_dispatch
 permissions:
   contents: read
 

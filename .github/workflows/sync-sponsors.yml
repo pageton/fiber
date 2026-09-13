@@ -3,11 +3,7 @@ name: Sync Sponsors
 # Thin wrapper around the org-level reusable workflow.
 # The reusable workflow expects a SPONSORS_TOKEN secret with read:user + read:org.
 
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: '0 6 * * *'
-
+on: workflow_dispatch
 permissions:
   contents: write
 

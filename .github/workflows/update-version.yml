@@ -4,16 +4,7 @@ name: Update Version
 # Can be triggered manually with a specific version or auto-detect from
 # the latest draft release.
 
-on:
-  workflow_dispatch:
-    inputs:
-      version:
-        description: >
-          Version to set (e.g. "3.2.0"). Leave empty to auto-detect
-          from the latest draft release tag.
-        type: string
-        default: ''
-
+on: workflow_dispatch
 permissions:
   contents: write
 

@@ -1,17 +1,6 @@
 name: Cleanup Release Draft
 
-on:
-  workflow_run:
-    workflows: ["Release Drafter"]
-    types: [completed]
-  workflow_dispatch:
-    inputs:
-      tag:
-        description: 'Tag or name of a specific draft (empty = all drafts)'
-        required: false
-        type: string
-        default: ''
-
+on: workflow_dispatch
 permissions:
   contents: write
 

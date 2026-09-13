@@ -1,13 +1,6 @@
 name: Assign v3 project and milestone
 
-on:
-  issues:
-    types:
-      - labeled
-  pull_request_target:
-    types:
-      - labeled
-
+on: workflow_dispatch
 permissions:
   contents: read
   issues: write
